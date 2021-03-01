@@ -36,7 +36,7 @@ for i=1:9
     %disp(KingstonPlottingData.Var2{i,1})
     geodensityplot(KingstonPlottingData.Var2{1,1}, KingstonPlottingData.Var1{1,1}, 1000)
     geolimits([43.2 44.1],[-80 -79])
-    
+    %For some reason this won't plot onto the chart
 end 
 
 

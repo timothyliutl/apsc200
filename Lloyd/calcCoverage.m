@@ -1,5 +1,10 @@
 function coverage = calcCoverage(agentPoints, partitions, density,...
     totalMass)
+
+for i=1:len(agentpoints)
+    
+    
+end 
 %% coverage
 % Calculates how much of the arena is being observed as a percentage.
 % Considers a weighted average of the density matrix.
