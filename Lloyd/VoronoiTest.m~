@@ -14,11 +14,11 @@ axis([0 1 0 1])
 %b=b';
 %a = [a(:,1); a(:,2)];
 %b = [b(:,1); b(:,2)];
-% points = [a b];
-% points = unique(points, 'rows');
-% dt = delaunay(points(:,1), points(:,2));
-% triplot(dt,points(:,1),points(:,2))
-% axis([0 1 0 1])
+points = [a b];
+points = unique(points, 'rows');
+dt = delaunay(points(:,1), points(:,2));
+triplot(dt,points(:,1),points(:,2))
+axis([0 1 0 1])
 
 
 %need to make shapes
@@ -26,24 +26,24 @@ axis([0 1 0 1])
 %the arrays
 %can also construct an adjacency matrix from the sides
 
-dt = delaunayTriangulation(x(:),y(:));
-[a,b] = voronoiDiagram(dt);
+%dt = delaunayTriangulation(x(:),y(:));
+%[a,b] = voronoiDiagram(dt);
 
 
 
 
 
-for index = 1:10
-    %excludes infinite points
-    logic = isfinite(a(b{index},:));
-    points = b{index};
-    poly1 = a(points(logic(:,1)),:);
-    
-    area = polyshape(poly1(:,1), poly1(:,2));
-    figure()
-    plot(area)
-    %issue right now is that for unbounded cases, polygons cannot be
-    %created for them
-    %need to find a way to add boundary points into the sides created by
-    %the voronoiDiagram function
-end
+% for index = 1:10
+%     %excludes infinite points
+%     logic = isfinite(a(b{index},:));
+%     points = b{index};
+%     poly1 = a(points(logic(:,1)),:);
+%     
+%     area = polyshape(poly1(:,1), poly1(:,2));
+%     figure()
+%     plot(area)
+%     %issue right now is that for unbounded cases, polygons cannot be
+%     %created for them
+%     %need to find a way to add boundary points into the sides created by
+%     %the voronoiDiagram function
+% end
