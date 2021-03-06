@@ -30,9 +30,6 @@ dt = delaunayTriangulation(x(:),y(:));
 [a,b] = voronoiDiagram(dt);
 
 
-
-
-
 for index = 1:10
     %excludes infinite points
     logic = isfinite(a(b{index},:));
